@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>코드캠프 회원가입</title>
+    <link href = "./final.css" rel = "stylesheet">
+    <script src = "./final.js"></script>
+</head>
+<body>
+    <div class = "register">
+        <div class = "content__box">
+            <div class = "content__box__title">코드캠프 회원가입</div>
+            <div class = "content__box__info">
+                <div class = "input__container">
+                    <input type = "text" class = "box__info__input" id = "email" placeholder="이메일을 입력해 주세요.">
+                    <div class="errorDesign" id="emailError" style="color: red;"></div>
+                </div>
+                <div class = "input__container">
+                    <input type = "text" class = "box__info__input" id = "name" placeholder="이름을 입력해 주세요.">
+                    <div class="errorDesign" id="nameError" style="color: red;"></div>
+                </div>
+                <div class = "input__container">
+                    <input type = "password" class = "box__info__input" id = "pwFirst" placeholder="비밀번호를 입력해 주세요.">
+                    <div class="errorDesign" id="pwError1" style="color: red;"></div>
+                </div>
+                <div class = "input__container">
+                    <input type = "password" class = "box__info__input" id = "pwAgain" placeholder="비밀번호를 다시 입력해 주세요.">
+                    <div class="errorDesign" id="pwError2" style="color: red;"></div>
+                </div>
+            </div>
+            <br><br>
+            <div class = "content__box__auth">
+                <div class = "auth__input">
+                    <input type = "text" class = "auth__input__num" id = "p1" oninput="changeFocus()" maxlength="3"> -
+                    <input type = "text" class = "auth__input__num" id = "p2" oninput="changeFocus2()" maxlength="4"> -
+                    <input type = "text" class = "auth__input__num" id = "p3" oninput="numCompleted()" maxlength="4">
+                </div>
+                <div class = "auth__rec">
+                    <div class = "auth__rec__num">
+                        <div class = "rec__num" id = "rec__num">000000</div>
+                        <button disabled class = "auth__rec__btn"
+                         id = "auth__rec__btn" onclick="rec__num()" onmousedown = "applyStyle('auth__rec__btn')" onmouseup="revertStyle('auth__rec__btn')">인증번호 전송</button>
+                    </div>
+                    <div class = "auth__rec__time">
+                        <div class = "rec__num" id = "rec__time">3:00</div>
+                        <button disabled class = "auth__rec__btn" id = "auth__rec__time">인증완료</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "content__box__select">
+                <select class = "select__box">
+                    <option value="value1" selected disabled>지역을 선택하세요.</option>
+                    <option value="seoul">서울</option>
+                    <option value="kyeongki">경기</option>
+                    <option value="incheon">인천</option>
+                </select>
+                <div class = "errorDesign" id="regionError" style = "color : red"></div>
+                <div class = "select__gender">
+                    <label><input type="radio" name="gender">여성</label>
+                    <label><input type="radio" name="gender">남성</label>
+                </div>
+                <div class = "errorDesign" id="genderError" style = "color : red"></div>
+            </div>
+            <div class = "divideLine"></div>
+            <div class = "register__btn">
+                <button class = "register__btn__final" id = "register__btn__final" 
+                onmousedown = "applyStyle('register__btn__final')" 
+                onmouseup="revertStyle('register__btn__final')" onclick = "final()">가입하기</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
